@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Formular</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="de">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Automatisch anpassbare Textfelder</title>
+      <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background-color: #f4f4f4;
+          margin: 0;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+        }
+        .copy-box {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: white;
+          padding: 8px 12px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+          width: fit-content;
+          max-width: 90vw;
+          overflow: auto;
+        }
+        .copy-text {
+          font-size: 16px;
+          border: none;
+          outline: none;
+          text-align: center;
+          background: none;
+          width: auto;
+          min-width: 50px;
+        }
+        .hidden-measure {
+          position: absolute;
+          visibility: hidden;
+          white-space: nowrap;
+          font-size: 16px;
+          padding: 0;
+        }
+        .copy-btn {
+          background: #e0e0e0;
+          border: none;
+          cursor: pointer;
+          font-size: 18px;
+          padding: 6px 10px;
+          border-radius: 8px;
+          transition: background 0.2s;
+        }
+        .copy-btn:hover {
+          background: #d6d6d6;
+        }
+      </style>
+    </head>
+    <body>
+    
+    <div class="container">
+      <div class="copy-box">
+        <span class="hidden-measure"></span>
+        <input class="copy-text" type="text" value="Kurzer Text" readonly oninput="passeBreiteAn(this)">
+        <button class="copy-btn" onclick="kopieren(this)">📋</button>
+      </div>
+    
+      <div class="copy-box">
+        <span class="hidden-measure"></span>
+        <input class="copy-text" type="text" value="Ein etwas längerer Text" readonly oninput="passeBreiteAn(this)">
+        <button class="copy-btn" onclick="kopieren(this)">📋</button>
+      </div>
+    
+      <div class="copy-box">
+        <span class="hidden-measure"></span>
+        <input class="copy-text" type="text" value="Extrem langer Text, der wirklich viel Platz benötigt!" readonly oninput="passeBreiteAn(this)">
+        <button class="copy-btn" onclick="kopieren(this)">📋</button>
+      </div>
+    </div>
+    
+    <script>
+    function kopieren(button) {
+      let textfeld = button.previousElementSibling;
+      navigator.clipboard.writeText(textfeld.value);
+    }
+    
+    function passeBreiteAn(input) {
+      let measure = input.parentElement.querySelector(".hidden-measure");
+      measure.textContent = input.value;
+      input.style.width = (measure.offsetWidth + 20) + "px"; // etwas Puffer
+    }
+    
+    // Breite beim Start anpassen
+    document.querySelectorAll('.copy-text').forEach(passeBreiteAn);
+    </script>
+    
+    </body>
+    </html>
+    
+<!-- Platzhalter für Erfolgsmeldung (steht jetzt über dem Login!) -->
+<p id="successMessage" style="color: green; font-weight: bold; text-align: center; white-space: pre-line;"></p>
+
+<div class="login-container" id="loginContainer">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" class="input-field" placeholder="Benutzername" required>
+        <input type="password" id="password" class="input-field" placeholder="Passwort" required>
+        <button type="submit" class="login-btn">Einloggen</button>
+    </form>
+    <p class="error" id="errorMessage"></p>
+</div>
+
+<script src="script2.js"></script>
+
+</body>
+</html>
