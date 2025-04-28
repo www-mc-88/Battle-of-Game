@@ -6,13 +6,17 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     
     // Benutzer-Datenbank mit individuellem Text
     const users = {
-        "admin": {
-            password: "admin7379",
+        "bboyj": {
+            password: "bboyj",
             welcomeText: "Willkommen zurück, großer Admin! 👑\nWir wünschen dir einen tollen Tag!"
         },
         "zaynnn": {
-            password: "555",
+            password: "zynnn",
             welcomeText: "Hey Zaynnn! Schön dich zu sehen! 🎵"
+        },
+        "janisbln": {
+            password: "janisbln",
+            welcomeText: "Willkommen zurück janisbln, du hast die höste sicherheitz stufe heißt du kannst alle codes sehen\nplayer:73958\npremium:62548\nsup:73469\nmod:36597\nblider:98399\nadmin.74657\nowner:73955\nHost:84796"
         }
     };
     
