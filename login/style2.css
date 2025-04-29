@@ -53,3 +53,6 @@ h2 {
     font-size: 16px;
     text-align: center;
 }
+.logout {
+    text-decoration: none;
+}
