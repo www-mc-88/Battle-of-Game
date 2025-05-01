@@ -146,6 +146,15 @@
         <input class="copy-text" type="text" value="Extrem langer Text, der wirklich viel Platz benötigt!" readonly oninput="passeBreiteAn(this)">
         <button class="copy-btn" onclick="kopieren(this)">copy</button>
       </div>
+        <div class="login-container" id="loginContainer">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" class="input-field" placeholder="Benutzername" required>
+        <input type="password" id="password" class="input-field" placeholder="Passwort" required>
+        <button type="submit" class="login-btn">Einloggen</button>
+    </form>
+    <p class="error" id="errorMessage"></p>
+</div>
     </div>
 
     </div>
