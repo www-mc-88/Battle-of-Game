@@ -8,14 +8,14 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     const users = {
         "bboyj": {
             password: "bboyj",
-            welcomeText: "Willkommen zurück, großer Admin! 👑\nWir wünschen dir einen tollen Tag!"
+            welcomeText: "Willkommen zurück bboyj, du hast die fast höste scherheitz stufe sicherheitz stufe heißt du kannst alle codes sehen auser host\nplayer:73958\npremium:62548\nsup:73469\nmod:36597\nblider:98399\nadmin.74657\nowner:73955\nHost:keine berechtigung"
         },
-        "zaynnn": {
-            password: "zynnn",
-            welcomeText: "Hey Zaynnn! Schön dich zu sehen! 🎵"
+        "julianboss77": {
+            password: "77",
+            welcomeText: "Willkommen zurück zaynnn, du hast eine nutzerdifinirte sicherheitz stufe und du hast nur zugrif auf player,sub und bilder\nplayer:73958\npremium:keine berechtigung\nsup:73469\nmod:keine berechtigung\nblider:98399\nadmin.keine berechtigung\nowner:keine berechtigung\nHost:keine berechtigung"
         },
         "janisbln": {
-            password: "janisbln",
+            password: "2014",
             welcomeText: "Willkommen zurück janisbln, du hast die höste sicherheitz stufe heißt du kannst alle codes sehen\nplayer:73958\npremium:62548\nsup:73469\nmod:36597\nblider:98399\nadmin.74657\nowner:73955\nHost:84796"
         }
     };
